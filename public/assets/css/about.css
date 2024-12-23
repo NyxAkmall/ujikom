@@ -1,0 +1,279 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #222;
+    color: white;
+    position: sticky;
+    z-index: 0;
+    top: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img{
+    width: 100px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: #007BFF;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/img/about-hero.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero span {
+    color: #ff7f50;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Our Core Values Section */
+.values {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.values .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.values h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.value-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.value-cards .card {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-cards .card h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.value-cards .card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.value-cards .card:hover {
+    transform: translateY(-10px);
+}
+
+/* Team Section */
+.team {
+    padding: 50px 0;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team .member {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team .member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team .member h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.team .member p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.team .member:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.footer .social-links {
+    margin-top: 10px;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .social-links img {
+    width: 30px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .value-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team .member {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about h2, .values h2, .team h2 {
+        font-size: 2rem;
+    }
+
+    .value-cards .card, .team .member {
+        width: 100%;
+    }
+}
